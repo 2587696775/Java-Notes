@@ -117,7 +117,7 @@ public class Singleton {
 
 一个工厂，一个方法，客户向工厂传递类型来指定工厂要创建的对象
 
-![工厂模式的 UML 图](F:\编程教程\个人笔记\图片\Java基础\简单工厂模式.png)
+![工厂模式的 UML 图](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/简单工厂模式.png)
 
 工厂类代码：
 
@@ -340,7 +340,7 @@ Java 程序设计语言总是采用按值调用（**方法接收的是调用者�
 
 **静态代码块对于定义在它之后的静态变量，可以赋值，但是不能访问，在它之前的静态变量可以赋值也可以访问。**
 
-![静态代码块赋值静态变量](F:\编程教程\个人笔记\图片\Java基础\静态代码块赋值静态变量.jpg)
+![静态代码块赋值静态变量](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/静态代码块赋值静态变量.jpg)
 
 ### 静态内部类
 
@@ -517,17 +517,17 @@ Thread.currentThread().getStackTrace()[1].getClassName(); // 类名
 1.  **内核等待 I/O 设备准备好数据**
 2.  **内核将数据从内核空间拷贝到用户空间。**
 
-![img](F:\编程教程\个人笔记\图片\Java基础\BIO、NIO、AIO.jpg)
+![img](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/BIO、NIO、AIO.jpg)
 
 ### BIO (Blocking I/O)
 
 BIO属于同步阻塞IO模型，应用程序发起 read 调用后，会一直阻塞，直到在内核把数据拷贝到用户空间。
 
-![图源：《深入拆解Tomcat & Jetty》](F:\编程教程\个人笔记\图片\Java基础\同步阻塞IO模型.jpg)
+![图源：《深入拆解Tomcat & Jetty》](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/同步阻塞IO模型.jpg)
 
 ### NIO (Non-blocking/New I/O)
 
-![图源：《深入拆解Tomcat & Jetty》](F:\编程教程\个人笔记\图片\Java基础\同步非阻塞IO模型.jpg)
+![图源：《深入拆解Tomcat & Jetty》](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/同步非阻塞IO模型.jpg)
 
 同步非阻塞 IO 模型中，应用程序会一直发起 read 调用，等待数据从内核空间拷贝到用户空间的这段时间里，线程依然是阻塞的，直到在内核把数据拷贝到用户空间。
 
@@ -537,13 +537,13 @@ BIO属于同步阻塞IO模型，应用程序发起 read 调用后，会一直阻
 
 这个时候，**I/O 多路复用模型** 就上场了。
 
-![img](F:\编程教程\个人笔记\图片\Java基础\IO多路复用模型.jpg)
+![img](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/IO多路复用模型.jpg)
 
 ### AIO (Asynchronous I/O)
 
 异步 IO 是基于事件和回调机制实现的，也就是应用操作之后会直接返回，不会堵塞在那里，当后台处理完成，操作系统会通知相应的线程进行后续的操作。
 
-![img](F:\编程教程\个人笔记\图片\Java基础\异步IO模型.jpg)
+![img](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/异步IO模型.jpg)
 
 ## 集合
 
@@ -551,11 +551,11 @@ Java集合接口分成两组
 
 ### Collection集合结构：
 
-![img](F:\编程教程\个人笔记\图片\Java基础\Collection集合.jpg)
+![img](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/Collection集合.jpg)
 
 ### Map集合结构：
 
-![Java Map Hierarchy](F:\编程教程\个人笔记\图片\Java基础\Map集合.jpg)
+![Java Map Hierarchy](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/Map集合.jpg)
 
 ### 说说List、Set、Map三者的区别
 
@@ -584,7 +584,7 @@ Java集合接口分成两组
     2.  新的数组长度大于`Integer.MAX_VALUE - 8`的话，数组扩容到``Integer.MAX_VALUE`
     3.  调用`Arrays.copyOf()`返回新的数组
 
-![image-20210312224227778](F:\编程教程\个人笔记\图片\Java基础\ArrayList扩容.png)
+![image-20210312224227778](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/ArrayList扩容.png)
 
 ### Set
 
@@ -601,7 +601,7 @@ Java集合接口分成两组
 
 #### HashMap的底层实现
 
-![img](F:\编程教程\个人笔记\图片\Java基础\HashMap结构图.jpg)
+![img](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/HashMap结构图.jpg)
 
 ##### 重要参数
 
@@ -642,7 +642,7 @@ Java集合接口分成两组
     }
     ```
 
-    ![这里写图片描述](F:\编程教程\个人笔记\图片\Java基础\HashMap的初始化容量为什么是2的幂.png)
+    ![这里写图片描述](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/HashMap的初始化容量为什么是2的幂.png)
 
 ##### hash方法的实现
 
@@ -655,7 +655,7 @@ static final int hash(Object key) {
 
 **key的hash值高16位不变，低16位与高16位异或作为key的最终hash值**。（h >>> 16，表示无符号右移16位，高位补0，任何数跟0异或都是其本身，因此key的hash值高16位不变。）
 
-![这里写图片描述](F:\编程教程\个人笔记\图片\Java基础\HashMap的hash方法.png)
+![这里写图片描述](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/HashMap的hash方法.png)
 
 ##### 计算下标index
 
@@ -663,11 +663,11 @@ static final int hash(Object key) {
 index = （n-1） & hash; // n是resize()之后table的长度
 ```
 
-![hash](F:\编程教程\个人笔记\图片\Java基础\HashMap计算下标.png)
+![hash](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/HashMap计算下标.png)
 
 ##### put方法的实现
 
-![img](F:\编程教程\个人笔记\图片\Java基础\HashMap的put(key,val)方法.png)
+![img](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/HashMap的put(key,val)方法.png)
 
 大致的过程为：
 
@@ -824,7 +824,7 @@ synchronized只锁定当前链表或红黑二叉树的首节点，这样只要ha
 
 HashSet底层是基于HashMap实现的，元素存放在内部的HashMap的key中，map所有的value是同一个Object对象
 
-![image-20210310111536457](F:\编程教程\个人笔记\图片\Java基础\HashSet的add方法.jpg)
+![image-20210310111536457](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/HashSet的add方法.jpg)
 
 ### Comparable和Comparator的区别
 
@@ -938,9 +938,9 @@ Linux 相⽐与其他操作系统（包括其他类 Unix 系统）有很多的�
 
 ### 线程的生命周期和状态
 
-![image-20210314213925521](F:\编程教程\个人笔记\图片\Java基础\线程6种状态.png)
+![image-20210314213925521](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/线程6种状态.png)
 
-![image-20210314214116219](F:\编程教程\个人笔记\图片\Java基础\Java线程状态切换.png)
+![image-20210314214116219](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/Java线程状态切换.png)
 
 线程创建之后它将处于 **NEW（新建）** 状态，调用 `start()` 方法后开始运行，等到线程获得了 CPU 时间片（timeslice）后就处于 **RUNNING（运行）** 状态。
 
@@ -977,7 +977,7 @@ join可以看做是线程之间的协作，一个线程的输入可能依赖另�
 -   只有在创建线程时才能指定其所在的线程组，线程运行中途不能改变它所属的线程组，也就是说线程一旦指定所在的线程组，就直到该线程结束。
     线程组与线程之间结构类似于树形的结构：
 
-    ![这里写图片描述](F:\编程教程\个人笔记\图片\Java基础\线程组与线程.png)
+    ![这里写图片描述](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/线程组与线程.png)
 
 ### 线程优先级
 
@@ -1006,7 +1006,7 @@ Java中的优先级来说不是特别的可靠，**Java程序中对线程所设�
 
 在很多场景中，同步资源的锁定时间很短，为了这一小段时间去切换线程，线程挂起和恢复的花费可能会让系统得不偿失。这个时候可以让请求锁的线程不放弃CPU时间片，看看持有锁的线程是不是很快就会释放锁。自旋锁就是实现当前线程"稍等一下"，如果在自旋完成之后前面锁定同步资源的线程已经释放锁了，那么当前线程就可以直接获取同步资源，从而避免了上下文切换的开销。
 
-![img](F:\编程教程\个人笔记\图片\Java基础\自旋锁.png)
+![img](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/自旋锁.png)
 
 **自旋锁（spinlock）**：是指当一个线程在获取锁的时候，如果锁已经被其它线程获取，那么该线程将循环等待，然后不断的判断锁是否能够被成功获取，直到获取到锁才会退出循环。 
 
@@ -1046,9 +1046,9 @@ public class SpinLock {
 
 synchronized，ReentrantLock默认是非公平锁，可以通过构造方法指定使用公平锁。
 
-![img](F:\编程教程\个人笔记\图片\Java基础\非公平锁.png)
+![img](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/非公平锁.png)
 
-![img](F:\编程教程\个人笔记\图片\Java基础\非公平锁.png)
+![img](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/非公平锁.png)
 
 #### 可重入锁 VS 非可重入锁
 
@@ -1089,7 +1089,7 @@ public class Widget {
 
 如下图所示，线程 A 持有资源 2，线程 B 持有资源 1，他们同时都想申请对⽅的资源，所以这两个线程就会互相等待⽽进⼊死锁状态。
 
-![线程死锁示意图 ](F:\编程教程\个人笔记\图片\Java基础\死锁1.png)
+![线程死锁示意图 ](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/死锁1.png)
 
 死锁例子：
 
@@ -1305,7 +1305,7 @@ JMM规定了所有共享变量存储在主内存中，每个线程有自己的�
 
 Java 内存模型定义了8个操作来完成主内存和工作内存的交互操作
 
-![主内存和工作内存交互操作](F:\编程教程\个人笔记\图片\Java基础\主内存和工作内存交互操作.png)
+![主内存和工作内存交互操作](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/主内存和工作内存交互操作.png)
 
 **lock(锁定)**：作用于主内存中的变量，把变量标识为一个线程独占的状态。
 
@@ -1350,7 +1350,7 @@ volatile是Java提供的轻量级的同步机制。
 
 为了实现volatile的内存语义，JMM针对编译器制定了volatile重排序规则表：
 
-![在这里插入图片描述](F:\编程教程\个人笔记\图片\Java基础\volatile重排序规则表.png)
+![在这里插入图片描述](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/volatile重排序规则表.png)
 
 "NO"表示禁止重排序，为了实现volatile语义，编译器在生成字节码时，会在指令序列中插入内存屏障来禁止特定类型的处理器重排序，JMM采取了保守策略：
 
@@ -1359,9 +1359,9 @@ volatile是Java提供的轻量级的同步机制。
 3.  在每个volatile**读**操作**后面**插入一个**LoadLoad**屏障，禁止上面的volatile读和下面所有的普通读重排序；
 4.  在每个volatile**读**操作**后面**插入一个**LoadStore**屏障，禁止上面的volatile读和下面所有的普通写重排序。
 
-![在这里插入图片描述](F:\编程教程\个人笔记\图片\Java基础\volatile写内存屏障.png)
+![在这里插入图片描述](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/volatile写内存屏障.png)
 
-![在这里插入图片描述](F:\编程教程\个人笔记\图片\Java基础\volatile读内存屏障.png)
+![在这里插入图片描述](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/volatile读内存屏障.png)
 
 #### **volatile原理**
 
@@ -1492,7 +1492,7 @@ ThreadPoolExecutor(int corePoolSize,
 
 #### 线程池运行流程
 
-![图2 ThreadPoolExecutor运行流程](F:\编程教程\个人笔记\图片\Java基础\线程池运行流程.png)
+![图2 ThreadPoolExecutor运行流程](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/线程池运行流程.png)
 
 ##### 任务管理：
 
@@ -1506,9 +1506,9 @@ ThreadPoolExecutor(int corePoolSize,
 
 线程池维护了两个变量：**运行状态(runState)**和**有效线程数量(workCount)**
 
-![img](F:\编程教程\个人笔记\图片\Java基础\线程池运行状态.png)
+![img](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/线程池运行状态.png)
 
-![图3 线程池生命周期](F:\编程教程\个人笔记\图片\Java基础\线程池生命周期.png)
+![图3 线程池生命周期](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/线程池生命周期.png)
 
 #### 线程池任务执行机制
 
@@ -1524,13 +1524,13 @@ execute方法执行过程：
 4.  如果workCount >= corePoolSize，并且阻塞队列已满，然后workCount < maximumPoolSize，则创建并启动一个线程执行新提交的任务。
 5.  如果阻塞队列已满，workCount >= maximumPoolSize，根据饱和策略处理该任务，默认是直接抛异常。
 
-![图4 任务调度流程](F:\编程教程\个人笔记\图片\Java基础\线程池任务调度流程.png)
+![图4 任务调度流程](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/线程池任务调度流程.png)
 
 ##### 任务缓冲
 
 阻塞队列：
 
-![img](F:\编程教程\个人笔记\图片\Java基础\线程池的阻塞队列.png)
+![img](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/线程池的阻塞队列.png)
 
 ##### 任务申请
 
@@ -1540,7 +1540,7 @@ execute方法执行过程：
 
 四种拒绝策略
 
-![img](F:\编程教程\个人笔记\图片\Java基础\线程池拒绝策略.png)
+![img](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/线程池拒绝策略.png)
 
 ## JVM
 
@@ -1549,8 +1549,8 @@ execute方法执行过程：
 JVM数据区分为：java虚拟机栈、本地方法栈、程序计数器、堆，其中堆是线程共享的。
 
 <center class="half">
-    <img src="F:\编程教程\个人笔记\图片\Java基础\JDK1.6运行时数据区域.png" width="50%"/>
-    <img src="F:\编程教程\个人笔记\图片\Java基础\Java运行时数据区域JDK1.8.png" width="49%"/>
+    <img src="https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/JDK1.6运行时数据区域.png" width="50%"/>
+    <img src="https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/Java运行时数据区域JDK1.8.png" width="49%"/>
 </center>
 #### 程序计数器
 
@@ -1573,7 +1573,7 @@ JVM数据区分为：java虚拟机栈、本地方法栈、程序计数器、堆�
 
 #### Java虚拟机栈
 
-![stack](F:\编程教程\个人笔记\图片\Java基础\Java虚拟机栈.png)
+![stack](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/Java虚拟机栈.png)
 
 Java虚拟机栈也是线程私有的，生命周期和线程相同，描述的是Java方法执行的内存模型，每次方法调用的数据都是通过栈传递的。
 
@@ -1597,7 +1597,7 @@ Java虚拟机栈会出现两种错误：StackOverFlowError和OutOfMemoryError
 
 #### 堆
 
-![heap](F:\编程教程\个人笔记\图片\Java基础\堆.png)
+![heap](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/堆.png)
 
 堆是Java虚拟机所管理的内存中最大的一块，是所有线程共享的，在Java虚拟机启动时创建。**此内存区域的唯一目的就是存放对象实例，几乎所有的对象实例以及数组都在这里分配内存。**
 
@@ -1639,7 +1639,7 @@ Java虚拟机栈会出现两种错误：StackOverFlowError和OutOfMemoryError
 -   本地内存，不受JVM大小限制，所以也不用GC
 -   堆，对象实例和数组在这块区域上分配内存，GC也主要是对这两类数据进行回收，堆是发生GC的区域
 
-![img](F:\编程教程\个人笔记\图片\Java基础\堆空间.png)
+![img](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/堆空间.png)
 
 #### 对象优先在Eden区分配
 
@@ -1663,7 +1663,7 @@ Java虚拟机栈会出现两种错误：StackOverFlowError和OutOfMemoryError
 
 ### 判断对象已经死亡
 
-![img](F:\编程教程\个人笔记\图片\Java基础\对象已经死亡.png)
+![img](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/对象已经死亡.png)
 
 #### 引用计数法
 
@@ -1689,7 +1689,7 @@ public class ReferenceCountingGc {
 
 这个算法的思想就是通过一系列的"GC Roots"对象作为起点，从这些节点向下搜索，走过的路径成为引用链，当一个对象到GC Roots没有任何引用链的话(就是到达不了GC Roots)，就说明这个对象是不可用的。
 
-![可达性分析算法 ](F:\编程教程\个人笔记\图片\Java基础\GC Roots.png)
+![可达性分析算法 ](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/GC Roots.png)
 
 可以作为GC Roots的对象有：
 
@@ -1728,19 +1728,19 @@ public class ReferenceCountingGc {
 
 **效率问题**、**空间问题（标记清除后会产生大量不连续的碎片）**
 
-![img](F:\编程教程\个人笔记\图片\Java基础\标记-清除算法.jpeg)
+![img](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/标记-清除算法.jpeg)
 
 #### 标记复制
 
 标记复制法是解决效率问题，它可以把内存分为大小相同的两块，每次只使用其中一块，当这一块内存使用完后，把所有还存活的对象复制到另一块去，再把使用的空间一次性清除掉，这样每次回收都是对内存的一半进行回收。
 
-![复制算法](F:\编程教程\个人笔记\图片\Java基础\标记-复制算法.png)
+![复制算法](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/标记-复制算法.png)
 
 #### 标记整理
 
 根据老年代的特点提出的一种标记算法，标记过程仍然与“标记-清除”算法一样，但不是标记不需要回收的对象，而是让所有存活的对象向一端移动，然后直接清理掉端边界以外的内存。
 
-![标记-整理算法 ](F:\编程教程\个人笔记\图片\Java基础\标记-整理算法.png)
+![标记-整理算法 ](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/标记-整理算法.png)
 
 #### 分代收集
 
@@ -1791,13 +1791,13 @@ public class ReferenceCountingGc {
 
 类加载器通常由JVM提供，我们也可以通过继承java.lang.ClassLoader来自定义类加载器。
 
-![image.png](F:\编程教程\个人笔记\图片\Java基础\类加载器分类.png)
+![image.png](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/类加载器分类.png)
 
 #### 类加载机制
 
 ##### 双亲委派
 
-![ClassLoader](F:\编程教程\个人笔记\图片\Java基础\双亲委派机制.png)
+![ClassLoader](https://raw.githubusercontent.com/2587696775/Java-Notes-Pics/main/Java基础/双亲委派机制.png)
 
 类加载时，首先会判断这个类是否被加载过，已经被加载过的类会直接返回，否则才尝试加载。加载的时候，会先请求父类加载器加载，父类加载器无法加载时，才会自己处理。
 
